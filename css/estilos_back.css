@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
+
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+a { text-decoration: none; }
+p { margin-bottom:0.3rem !important; /* Pisamos el default de Bootstrap */ }
+
+header{
+    background: linear-gradient(to right, rgba(255,255,255,1), rgba(0,0,0,0)), url('/assets/img/fotolinda2.jpg');
+    background-size: cover;
+    background-position: center 60%;
+    position:relative;
+    border-bottom: 1px solid rgb(201, 95, 112);
+}
+
+header nav.navbar {
+    background-color: rgba(255,255,255,0.75) !important;
+}
+header nav.navbar a {
+    color:rgb(201, 95, 112);
+}
+header nav.navbar a:hover {
+    color:rgb(121, 16, 16);
+}
+header nav.navbar .nav-link {
+    font-size:18px;
+    padding:8px 15px !important; /* Otra vez pisamos BS */
+}
+
+
+.logo {
+    width: 200px;
+}
+
+main{
+    padding: 30px;
+}
+
+#inicio img {
+    width: 400px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 5px 5px 30px rgba(0,0,0,0.3); 
+    
+}
+#inicio .bienvenidos {
+    margin: 0 auto;
+    width: 700px;
+    max-width: 80%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+#inicio .bienvenidos .izquierda {
+    width: 50%;
+
+}
+#inicio .bienvenidos .derecha {
+    width: 50%;
+}
+
+#inicio .bienvenidos .derecha img{
+    max-width: 100%;
+}
+#inicio h1{
+    margin-bottom: 30px;
+}
+h1 {
+    color: rgb(219, 91, 112);
+
+}
+h2{
+    color: rgb(219, 91, 112);
+}
+
+footer{
+    padding: 30px;
+    border-top: 1px solid rgb(219, 91, 112);
+}
+
+footer .redes {
+    display: flex;
+    justify-content: center;
+    gap:20px;
+}
+footer .redes a {
+    font-size:30px;
+    color: rgb(219, 91, 112);
+}
+footer .redes a:hover {
+    color: rgb(121, 16, 16);
+}
+
+footer p {
+    text-align: center;
+}
+
+/*Seccion Cosas Ricas*/
+
+#cosas-ricas {
+    width:900px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+}
+
+.irArriba{
+    text-decoration: none;
+    color: rgb(219, 91, 112);
+
+}
+
+#cosas-ricas #Tortas .containerCards{
+    display: flex;
+    column-gap:4%;
+    row-gap:20px;
+    flex-wrap: wrap;
+}
+#cosas-ricas #Tortas .containerCards .card{
+    background-color: bisque;
+    width:48%;
+}
+
+#cosas-ricas #Tortas .containerCards .card img{
+    object-fit: cover;
+}
+
+#cosas-ricas #Tortas .containerCards .card p {
+    padding: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#cosas-ricas #MiniCakes{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#cosas-ricas #MiniCakes .containerFotos{}
+
+#cosas-ricas #MiniCakes .containerFotos img{
+    border: 20px solid bisque;
+    object-fit: cover;
+    max-width: 100%;
+}
+
+#cosas-ricas #Lingotes{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+#cosas-ricas #Lingotes .containerFotos{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4%;
+    justify-content: center;
+}
+
+#cosas-ricas #Lingotes .containerFotos img{
+    border: 20px solid bisque;
+    width:48%;
+}
+
+#cosas-ricas #NumberCakes {
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+#cosas-ricas #NumberCakes .containerFotos {
+    display: flex;
+    justify-content: space-between;
+    gap:1.25%;
+}
+
+#cosas-ricas #NumberCakes .containerFotos img{
+    border: 5px solid bisque;
+    width:19%;
+}
+
+#cosas-ricas #Salado .containerCards {
+    display: flex;
+    column-gap:4%;
+    row-gap: 20px;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+#cosas-ricas #Salado .containerCards > div {
+    width:48%;
+    display: flex;
+    flex-direction: column;
+    background-color: bisque;
+}
+
+#cosas-ricas #Salado .containerCards .foto {
+    height:180px;
+    overflow: hidden;
+}
+
+#cosas-ricas #Salado .containerCards .foto img{
+    width:100%;
+}
+
+#cosas-ricas #Salado .containerCards > div p {
+    padding: 10px;
+}
+
+
+/* Desayunos */
+
+#Desayunos .contenido {
+    width:900px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin:0 auto;
+    flex-wrap:wrap;
+    gap:30px;
+}
+
+#Desayunos .contenido h1 {
+    width:100%;
+}
+
+#Desayunos .fotos {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap:20px;
+    flex-wrap: wrap;
+}
+
+#Desayunos .tipos {
+    width:100% !important;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#Desayunos .fotos img {
+    height: 200px;
+    width: auto;
+}
+
+#Desayunos .info {
+    padding: 20px;
+    background-color: rgba(201, 95, 112,0.2);
+    border-radius: 10px;
+}
+
+#Desayunos .info .fotos {
+    justify-content: space-around;
+}
+
+#Desayunos .info .fotos img {
+    padding:20px 0;
+    max-width: 40%;
+    height: auto;
+}
+
+
+
+@media screen and (min-width:768px) {
+    #cosas-ricas #Salado .containerCards {
+        align-items: stretch;
+        flex-wrap: nowrap;
+    }
+
+    #cosas-ricas #Salado .containerCards > div {
+        width:25%;
+    }
+}
+
+@media screen and (min-width:992px) {    
+    header nav.navbar .nav-link {
+        font-size:20px;
+    }
+
+    #cosas-ricas #Tortas .containerCards {
+        column-gap: 2%;
+    }
+    #cosas-ricas #Tortas .containerCards .card{
+        width:32%;
+    }
+
+    #Desayunos .tipos {
+        justify-content: space-between;
+    }
+
+    #Desayunos .contenido {
+        justify-content: space-between;
+    }
+    
+    #Desayunos .contenido > div {
+        width: 48%;
+    }
+}

@@ -1,0 +1,423 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
+
+@import "vars";
+@import "mixins";
+
+
+/** STYLES **/
+
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+a { text-decoration: none; }
+p { margin-bottom:0.3rem !important; /* Pisamos el default de Bootstrap */ }
+
+header {
+    background: linear-gradient(to right, rgba(255,255,255,1), rgba(0,0,0,0)), url('/assets/img/fotolinda2.jpg');
+    background-size: cover;
+    background-position: center 60%;
+    position:relative;
+    border-bottom: 1px solid rgb(201, 95, 112);
+
+    .logo {
+        width: 200px;
+    }
+
+    nav.navbar {
+        background-color: rgba(255,255,255,0.75) !important;
+
+        a {
+            color:rgb(201, 95, 112);
+        }
+
+        .nav-link {
+            font-size:18px;
+            padding:8px 15px !important; /* Otra vez pisamos BS */
+        }
+    }
+}
+
+main {
+    padding: 30px;
+}
+
+#inicio {
+    img {
+        width: 400px;
+        height: auto;
+        border-radius: 20px;
+        box-shadow: 5px 5px 30px rgba(0,0,0,0.3); 
+        
+    }
+
+    .bienvenidos {
+        margin: 0 auto;
+        width: 700px;
+        max-width: 80%;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        .izquierda {
+            width: 50%;
+        }
+
+        .derecha {
+            width: 50%;
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+
+    h1 {
+        margin-bottom: 30px;
+    }
+}
+
+h1 {
+    @include textoRed();
+}
+h2 {
+    @include textoRed();
+}
+
+footer {
+    padding: 30px;
+    border-top: 1px solid rgb(219, 91, 112);
+
+    .redes {
+        display: flex;
+        justify-content: center;
+        gap:20px;
+
+        a {
+            font-size:30px;
+            &:hover {
+                color: rgb(121, 16, 16);
+            }
+        }
+
+        @each $icono, $color in $iconosRed {
+            .#{$icono} {
+                color: $color;
+            }
+        }
+    }
+
+    p {
+        text-align: center;
+    }
+}
+
+/* Seccion Cosas Ricas */
+
+#cosas-ricas {
+    width:900px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+
+    .irArriba {
+        text-decoration: none;
+        @include textoRed();
+    }
+
+    #Tortas {
+        .containerCards{
+            display: flex;
+            column-gap:4%;
+            row-gap:20px;
+            flex-wrap: wrap;
+            
+            .card {
+                background-color: bisque;
+                width:48%;
+
+                img {
+                    object-fit: cover;
+                }
+                
+                p {
+                    padding: 5px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+
+    #MiniCakes {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .containerFotos {
+            img {
+                border: 20px solid bisque;
+                object-fit: cover;
+                max-width: 100%;
+            }
+        }
+    }
+
+    #Lingotes {
+        display: flex;
+        flex-direction: column;
+        gap:10px;
+
+        .containerFotos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4%;
+            justify-content: center;
+            
+            img {
+                border: 20px solid bisque;
+                width:48%;
+            }
+        }
+    }
+
+    #NumberCakes {
+        display: flex;
+        flex-direction: column;
+        gap:10px;
+
+        .containerFotos {
+            display: flex;
+            justify-content: space-between;
+            gap:1.25%;
+
+            img {
+                border: 5px solid bisque;
+                width:19%;
+            }
+        }
+    }
+
+    #Salado {
+        .containerCards {
+            display: flex;
+            column-gap:4%;
+            row-gap: 20px;
+            align-items: stretch;
+            flex-wrap: wrap;
+
+            > div {
+                width:48%;
+                display: flex;
+                flex-direction: column;
+                background-color: bisque;
+                
+                p {
+                    padding: 10px;
+                }
+            }
+
+            .foto {
+                height:180px;
+                overflow: hidden;
+
+                img {
+                    width:100%;
+                }
+            }
+        }
+    }
+}
+
+/* Desayunos */
+
+#Desayunos {
+    .contenido {
+        width:900px;
+        max-width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin:0 auto;
+        flex-wrap:wrap;
+        gap:30px;
+
+        h1 {
+            width:100%;
+        }
+    }
+
+    .fotos {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap:20px;
+        flex-wrap: wrap;
+
+        img {
+            height: 200px;
+            width: auto;
+        }
+    }
+
+    .tipos {
+        width:100% !important;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .info {
+        padding: 20px;
+        background-color: rgba(201, 95, 112,0.2);
+        border-radius: 10px;
+
+        .fotos {
+            justify-content: space-around;
+
+            img {
+                padding:20px 0;
+                max-width: 40%;
+                height: auto;
+            }
+        }
+    }
+}
+
+
+
+/* Soy Clari */
+
+#soyclari {
+    width:900px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size:18px;
+    
+    p:last-of-type {
+        font-weight: 700;
+        color: $rojo-dark;
+    }
+
+    img {
+        border-radius: 20px;
+        display: block;
+        margin:0 auto;
+        height: auto;
+        max-width: 80%;
+    }
+}
+
+
+
+/* Contacto */
+
+#contacto {
+    width:900px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        gap:40px;
+
+        .formulario {
+            .campos {
+                display: flex;
+                flex-direction: column;
+                row-gap:10px;
+            }
+    
+            input:not([type=submit]), textarea {
+                border:2px solid $rojo-dark;
+                border-radius: 3px;
+                padding:5px;
+                width:100%;
+            }
+        
+            button[type=submit] {
+                border: 0;
+                border-radius: 5px;
+                padding:7px 15px;
+                font-weight: 700;
+                text-transform: uppercase;
+                background-color: $rojo-dark;
+                color:#fff;
+            }
+        }
+
+        .direccion {
+            display: flex;
+            flex-direction: column;
+            gap:20px;
+
+            iframe {
+                width:100%;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width:768px) {
+    #cosas-ricas {
+        #Salado {
+            .containerCards {
+                align-items: stretch;
+                flex-wrap: nowrap;
+
+                > div {
+                    width:25%;
+                }
+            }
+        }
+    }
+
+    #contacto {
+        .info {
+            display: flex;
+            flex-direction: row;
+            .formulario { width:40%; }
+            .direccion { width:60%; }
+        }
+    }
+}
+
+@media screen and (min-width:992px) {    
+    header nav.navbar .nav-link {
+        font-size:20px;
+    }
+
+    #cosas-ricas {
+        #Tortas {
+            .containerCards {
+                column-gap: 2%;
+                .card {
+                    width: 32%;
+                }
+            }
+        }
+    }
+
+    #Desayunos {
+        .tipos {
+            justify-content: space-between;
+        }
+        .contenido {
+            @include spaceBetween();
+            > div {
+                width: 48%;
+            }
+        }
+    }
+}

@@ -1,0 +1,7 @@
+/** MIXINS **/
+@mixin spaceBetween() {
+    justify-content: space-between;
+}
+@mixin textoRed() {
+    color: $rojo-dark;
+}
