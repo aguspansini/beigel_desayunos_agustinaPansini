@@ -6,7 +6,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Beigel Desayunos</title>
+        <title>Contacto - Beigel Desayunos</title>
         <meta name="description" content="Este es el sitio de Beigel Desayunos, con cosas ricas para ser feliz.">
         <meta name="keywords" content="tortas, desayunos, cosas ricas, beigel, salados, eventos, regalos, dulces, baby shower">
         <!-- Bootstrap CSS -->
@@ -30,7 +30,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="/pages/home.html">Home</a>
+                        <a class="nav-link" aria-current="page" href="/pages/home.html">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="/pages/soyclari.html">Soy Clari</a>
@@ -67,20 +67,23 @@
         </div>
 
         <div class="info">
+
+            <!--el formulario utiliza formspree y esta funcionando -->
+
             <div class="formulario">
-                <form>
+                <form action="https://formspree.io/f/meqwlven" method="POST">
                     <div class="campos">
                         <div>
-                            <input type="text" placeholder="Nombre">
+                            <input name="fullName" type="text" placeholder="Nombre">
                         </div>
                         <div>
-                            <input type="text" placeholder="Asunto">
+                            <input name="subject" type="text" placeholder="Asunto">
                         </div>
                         <div>
-                            <input type="email" placeholder="ejemplo@gmail.com">
+                            <input name="email" type="email" placeholder="ejemplo@gmail.com" required>
                         </div>
                         <div>
-                            <textarea placeholder="Mensaje"></textarea>
+                            <textarea name="message" placeholder="Mensaje"></textarea>
                         </div>
                         <div>
                             <button type="submit">Enviar</button>
@@ -90,7 +93,8 @@
             </div>
 
             <div class="direccion">
-                <!--el mapa lo voy a ubicar a la derecha del formulario de contacto-->
+
+                <!--el mapa se ubica a la derecha del formulario de contacto-->
                 <div>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26358.76209023809!2d-59.00365455732046!3d-34.328959913638585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bb7be81ba76321%3A0x25b7697792446dd3!2sLos%20Cardales%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1674421754291!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
